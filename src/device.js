@@ -28,7 +28,7 @@ async function detectDevice() {
 
             console.log(`found device "${service.name}" at ${service.addresses[0]}:${service.port}`);
 
-            // if (service.name.indexOf('Chromecast') < 0) return;
+            if (service.name.indexOf('Chromecast') < 0) return;
 
             currentDevice = service.addresses[0];
             resolve(currentDevice);
